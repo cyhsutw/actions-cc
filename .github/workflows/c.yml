@@ -10,9 +10,9 @@ concurrency:
 
 jobs:
   main:
-    runs-on: unbuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Sleep and complete
         run: |
-          sleep 180
+          sleep 30
           exit 0

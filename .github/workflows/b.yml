@@ -6,7 +6,7 @@ on:
 
 jobs:
   main:
-    runs-on: unbuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Sleep and exit
         run: |
