@@ -3,6 +3,12 @@ name: Workflow C
 on:
   workflow_dispatch:
   workflow_call:
+  workflow_run:
+    workflows: 
+      - Workflow A
+      - Workflow B
+    types:
+      - completed
 
 concurrency:
   group: workflow-c
@@ -11,6 +17,7 @@ concurrency:
 jobs:
   main-c:
     runs-on: self-hosted
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Sleep and complete
         run: |

@@ -12,6 +12,3 @@ jobs:
         run: |
           sleep 30
           exit 0
-  call-c:
-    needs: main-a
-    uses: ./.github/workflows/c.yml
