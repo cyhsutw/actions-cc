@@ -1,0 +1,17 @@
+name: Workflow B
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: unbuntu-latest
+    steps:
+      - name: Sleep and exit
+        run: |
+          sleep 20
+          exit 0
+  call-c:
+    needs: main
+    uses: ./.github/workflows/c.yml
