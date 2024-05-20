@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  main:
+  main-a:
     runs-on: self-hosted
     steps:
       - name: Sleep and exit
