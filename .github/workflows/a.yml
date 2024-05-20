@@ -14,4 +14,4 @@ jobs:
           exit 0
   call-c:
     needs: main
-    uses: ./.github/workflows/c.yml@main
+    uses: ./.github/workflows/c.yml
